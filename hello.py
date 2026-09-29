@@ -1,9 +1,8 @@
-import streamlit as st
+from dotenv import load_dotenv
+import os
 
-st.title("My first app")
+load_dotenv()
 
-name = st.text_input("What's your name?")
-mood = st.slider("How are you feeling? (1-5)", 1, 5, 3)
-
-if st.button("Submit"):
-    st.success(f"Hi{name}! You picked{mood}.")
+secret = os.getenv("SECRET_MESSAGE")
+print("Hello, world!")
+print("The secret message is:", secret)
