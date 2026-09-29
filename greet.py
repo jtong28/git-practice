@@ -1,0 +1,1 @@
+print("Created from inside VS Code!")
